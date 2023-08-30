@@ -1,0 +1,262 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background-color: #fb5423;
+}
+
+button:disabled {
+	cursor: not-allowed;
+}
+
+/* nav elements */
+
+nav {
+	background-color: #424B54;
+	display: flex;
+	justify-content: space-between;
+	position: sticky;
+	width: 100%;
+	height: 15vh;
+	box-shadow: 0 0 15px 0 black;
+}
+
+nav button {
+	display: block;
+	width: 10vw;
+	margin: 10px;
+	transition: background-color .3s;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+nav button:active {
+	box-shadow: inset 0 0 4px black;
+	transition: 0;
+}
+
+nav input {
+	border: none;
+	border-bottom: 2px solid yellow;
+	color: white;
+	outline: none;
+	background-color: transparent;
+	height: 30%;
+	margin: auto 0;
+	transition: scale .25s;
+}
+
+nav ::placeholder {
+	color: white;
+}
+
+nav input:focus::placeholder {
+	color: transparent;
+}
+
+nav input:focus {
+	padding: 6px;
+	scale: 1.07;
+}
+
+#adder {
+	background-color: green;
+	font-size: 20px;
+}
+
+#adder:hover {
+	background-color: darkgreen;
+}
+
+#logout {
+	background-color: red;
+}
+
+#logout:hover {
+	background-color: #F71735;
+}
+
+/* Content div elements */
+
+span {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+h3 {
+	position: absolute;
+	font-size: large;
+	font-family: sans-serif;
+	margin: auto;
+	right: 0;
+	left: 0;
+	text-align: center;
+	outline: none;
+	width: 15%;
+	cursor: pointer;
+}
+
+a {
+	color: black;
+}
+
+p {
+	display: block;
+	font-weight: bold;
+	width: 60%;
+}
+
+#content {
+	display: flex;
+	flex-wrap: wrap-reverse;
+	justify-content: space-around;
+	
+}
+
+.card {
+	background-color: white;
+	display: block;
+	width: 80vw;
+	padding: 20px;
+	margin: 2% auto;
+	border: double 6px;
+	border-radius: 8px;
+	box-shadow: 3px 5px black;
+}
+
+.card button {
+	display: block;
+	cursor: pointer;
+	transition: background-color .4s;
+}
+
+.description {
+	display: none;
+	width: 80%;
+	overflow: hidden;
+	padding: 18px;
+	margin: 2% auto;
+	background-color: lightgray;
+	font-size: 18px;
+}
+
+.holder {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	width: 100%;
+}
+
+.expand_button {
+	background-color: transparent;
+	width: 3vw;
+	height: 3vw;
+	border: none;
+}
+
+.expand_button:hover {
+	background-color: lightgray;
+}
+
+.delete {
+	background-color: red;
+	background-image: url("trash can icon.jpg");
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+	transition: background-color .2s;
+	width: 50px;
+	height: 50px;
+	border-radius: 10px;
+}
+
+.delete:hover {
+	background-color: darkgoldenrod;
+}
+
+.editBtn {
+	background-color: transparent;
+	background-image: url("edit.webp");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	transition: background-color .2s;
+	position: relative;
+	margin: 0 5px;
+	width: 20px;
+	height: 20px;
+	border: none;
+}
+
+.editBtn:hover {
+	transform: translateY(-1vh);
+}
+
+/* Used in the js */
+
+.setTitle {
+	display: block;
+	width: 30%;
+	margin: 5px auto;
+	border: none;
+	text-align: center;
+	font-size: 30px;
+}
+
+.setTitle:focus {
+	font-size: 30px;
+	outline: none;
+}
+
+.setTitle:focus::placeholder {
+	color: transparent;
+}
+
+.doneBtn {
+	display: block;
+	width: 25%;
+	height: 5vh;
+	margin: auto;
+	border: none;
+	background-color: green;
+	font-weight: bold;
+}
+
+.doneBtn:hover {
+	background-color: darkgreen;
+}
+
+.doneBtn:active {
+	box-shadow: 0 0 5px inset;
+	transition: box-shadow 0;
+}
+
+.invalidInput {
+	border-bottom: 3px solid red;
+}
+
+.cancel {
+	display: block;
+	width: 15%;
+	height: 4vh;
+	margin: auto;
+	border: solid;
+	border-radius: 45px;
+	background-color: red;
+	font-weight: bold;
+}
+
+.cancel:hover {
+	background-color: darkred;
+}
+
+.cancel:active {
+	box-shadow: inset 0 0 3px;
+}
+
+.buttonHolder {
+	display: flex;
+	justify-content: space-around;
+}
